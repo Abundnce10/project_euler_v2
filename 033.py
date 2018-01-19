@@ -46,13 +46,10 @@ for i in range(10,100):
 
 keepers = []
 for fraction in fractions:
-    # print fraction, trivialFractionReduction(fraction[0], fraction[1])
     reduction = trivialFractionReduction(fraction[0], fraction[1])
     if reduction:
         original_fraction = float(fraction[0]) / float(fraction[1])
         new_fraction = reduction[0] / reduction[1]
-        print fraction, trivialFractionReduction(fraction[0], fraction[1])
-        print original_fraction, new_fraction
         if original_fraction == new_fraction:
             keepers.append(fraction)
 
